@@ -13,9 +13,10 @@ internal class Program
     }
 
 
-
+    /*It's also possible to store a lambda expression in a variable: */
+    Func<int,bool> isAnyEvenFunc = number => number % 2 == 0;
     //general pattern of a method:
-    private static bool IsAny(int[] numbers, Func<int, bool> predicate /*the method declared with the lambda expression is used in place of this aprameter*/
+    private static bool IsAny<T>(IEnumerable<T> numbers, Func<T, bool> predicate /*the method declared with the lambda expression is used in place of this aprameter*/
         /*a function is taking a number and returning a bool*/)
         // Func type that represents a function, first generic is the type of input parameter,
         // second is the type of return value
