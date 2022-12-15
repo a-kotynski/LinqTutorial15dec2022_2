@@ -10,6 +10,10 @@ internal class Program
 
         Console.WriteLine($"Is there any number > 100?: {isAnyLargerThan100}");
         Console.WriteLine($"Is there any number that is even?: {isAnyEven}");
+
+        var words = new[] { "aaa", "BBB", "ccc" };
+        bool isAnyOfLength4 = IsAny(words, word => word.Length == 4);
+
     }
 
 
